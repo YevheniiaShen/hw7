@@ -25,11 +25,10 @@
 
     <header class="header">
       <div class="container">
-       
+        <nav class="navigation">
           <a href="./index.html" class="link logo"
             >Web<span class="logo-part">Studio</span></a
           >
-        <nav class="navigation">
           <ul class="list nav">
             <li class="list-item">
               <a class="link nav-item current" href="./index.html">Studio</a>
@@ -42,6 +41,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="burger-button js-open-menu">
+          <svg width="32" height="22" class="burger-icon">
+            <use href="./images/icons.svg#menu-burger"></use>
+          </svg>
+        </button>
         <address class="address">
           <ul class="list address">
             <li class="address-item">
@@ -56,45 +60,114 @@
             </li>
           </ul>
         </address>
+      </div>
 
-        <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg
-            class="burger-icon"
-            width="32"
-            height="22"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
+<!-- Mobile menu -->
 
+      <div class="mob-menu js-menu-container">
+        <div class="mob-menu-container">
+          <button type="button" class="close-mob-menu-button js-close-menu">
+            <svg class="close-mob-menu-icon" width="8" height="8">
+              <use href="./images/icons.svg#close-modal"></use>
+            </svg>
+          </button>
+          <ul class="list mob-list">
+            <li class="mob-list-item">
+              <a class="link mob-menu-item current" href="">Studio</a>
+            </li>
+            <li class="mob-list-item">
+              <a class="link mob-menu-item" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="mob-list-item">
+              <a class="link mob-menu-item" href="">Contacts</a>
+            </li>
+          </ul>
+         <div class="mob-menu-wrapper">
+           <address class="mob-menu-address">
+             <ul class="list">
+               <li>
+                 <a class="link mob-menu-address-item phone" href="tel:+110001111111"
+                   >+11 (000) 111-11-11</a
+                 >
+               </li>
+               <li>
+                 <a
+                   class="link mob-menu-address-item email"
+                   href="mailto:info@devstudio.com"
+                   >info@devstudio.com</a
+                 >
+               </li>
+             </ul>
+           </address>
+           <ul class="list mob-list-social-links">
+             <li class="mob-social-links-item">
+               <a
+                 class="link mob-social-link"
+                 href=""
+                 target="_blank"
+                 rel="noopener no-referrer"
+               >
+                 <svg class="mob-social-link-icon" width="24" height="24">
+                   <use href="./images/icons.svg#instagram"></use>
+                 </svg>
+               </a>
+             </li>
+             <li class="mob-social-links-item">
+               <a
+                 class="link mob-social-link"
+                 href=""
+                 target="_blank"
+                 rel="noopener no-referrer"
+               >
+                 <svg class="mob-social-link-icon" width="24" height="24">
+                   <use href="./images/icons.svg#twitter"></use>
+                 </svg>
+               </a>
+             </li>
+             <li class="mob-social-links-item">
+               <a
+                 class="link mob-social-link"
+                 href=""
+                 target="_blank"
+                 rel="noopener no-referrer"
+               >
+                 <svg class="mob-social-link-icon" width="24" height="24">
+                   <use href="./images/icons.svg#facebook"></use>
+                 </svg>
+               </a>
+             </li>
+             <li class="mob-social-links-item">
+               <a
+                 class="link mob-social-link"
+                 href=""
+                 target="_blank"
+                 rel="noopener no-referrer"
+               >
+                 <svg class="mob-social-link-icon" width="24" height="24">
+                   <use href="./images/icons.svg#linkedin"></use>
+                 </svg>
+               </a>
+             </li>
+           </ul>
+         </div>
+        </div>
       </div>
     </header>
     <main>
       <!-- Hero -->
 
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="main-button" data-modal-open>
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
 
       <!-- Advantages -->
 
-      <!-- <section class="characteristics">
+      <section class="characteristics">
         <div class="container">
           <h2 class="visually-hidden">Advantages</h2>
           <ul class="list list-characteristics">
@@ -148,7 +221,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- What are we doing -->
 
@@ -157,48 +230,97 @@
           <h2 class="section-header">What are we doing</h2>
           <ul class="list list-activities">
             <li class="activities-item">
-              <img
-                src="./images/main/wwad1.jpg"
-                alt="desktop site"
-                width="360"
-                height="300"
-                class="activities-pic"
-              />
+              <picture
+                ><source
+                  srcset="
+                    ./images/main/wwad1@2x.webp 2x,
+                    ./images/main/wwad1@1x.webp 1x
+                  " />
+                <source
+                  srcset="
+                    ./images/main/wwad1@2x.jpeg 2x,
+                    ./images/main/wwad1@1x.jpg  1x
+                  " />
+                <img
+                  src="./images/main/wwad1@1x.jpg"
+                  alt="desktop site"
+                  width="360"
+                  height="300"
+                  class="activities-pic"
+              /></picture>
             </li>
             <li class="activities-item">
-              <img
-                src="./images/main/wwad2.jpg"
-                alt="mobile app"
-                width="360"
-                height="300"
-              />
+              <picture
+                ><source
+                  srcset="
+                    ./images/main/wwad2@2x.webp 2x,
+                    ./images/main/wwad2@1x.webp 1x
+                  " />
+                <source
+                  srcset="
+                    ./images/main/wwad2@2x.jpeg 2x,
+                    ./images/main/wwad2@1x.jpg  1x
+                  " />
+                <img
+                  src="./images/main/wwad2@1x.jpg"
+                  alt="mobile app"
+                  width="360"
+                  height="300"
+                  class="activities-pic"
+              /></picture>
             </li>
             <li class="activities-item">
-              <img
-                src="./images/main/wwad3.jpg"
-                alt="mobile site"
-                width="360"
-                height="300"
-              />
+              <picture
+                ><source
+                  srcset="
+                    ./images/main/wwad3@2x.webp 2x,
+                    ./images/main/wwad3@1x.webp 1x
+                  " />
+                <source
+                  srcset="
+                    ./images/main/wwad3@2x.jpeg 2x,
+                    ./images/main/wwad3@1x.jpg  1x
+                  " />
+                <img
+                  src="./images/main/wwad3@1x.jpg"
+                  alt="mobile site"
+                  width="360"
+                  height="300"
+                  class="activities-pic"
+              /></picture>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- Our team  -->
+      <!-- Our team -->
 
       <section class="team">
         <div class="container">
           <h2 class="section-header">Our Team</h2>
           <ul class="list list-team">
             <li class="employee-card">
-              <img
-                src="./images/main/emloyee-mark-guerrero.jpg"
-                alt="emloyee mark guerrero"
-                width="264"
-                height="260"
-                class="employee-photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/employee-mark@2x.webp 2x,
+                    ./images/main/employee-mark@1x.webp 1x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/main/employee-mark@2x.jpeg 2x,
+                    ./images/main/employee-mark@1x.jpg  1x
+                  "
+                />
+                <img
+                  src="./images/main/employee-mark@1x.jpg"
+                  alt="emloyee mark guerrero"
+                  width="264"
+                  height="260"
+                  class="employee-photo"
+                />
+              </picture>
               <div class="employee-description">
                 <h3 class="employee">Mark Guerrero</h3>
                 <p class="possition">Product Designer</p>
@@ -255,13 +377,27 @@
               </div>
             </li>
             <li class="employee-card">
-              <img
-                src="./images/main/employee-tom-ford.jpg"
-                alt="employee tom ford"
-                width="264"
-                height="260"
-                class="employee-photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/employee-tom@2x.webp 2x,
+                    ./images/main/employee-tom@1x.webp 1x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/main/employee-tom@2x.jpeg 2x,
+                    ./images/main/employee-tom@1x.jpg  1x
+                  "
+                />
+                <img
+                  src="./images/main/employee-tom@1x.jpg"
+                  alt="emloyee tom ford"
+                  width="264"
+                  height="260"
+                  class="employee-photo"
+                />
+              </picture>
               <div class="employee-description">
                 <h3 class="employee">Tom Ford</h3>
                 <p class="possition">Frontend Developer</p>
@@ -318,13 +454,27 @@
               </div>
             </li>
             <li class="employee-card">
-              <img
-                src="./images/main/emloyee-camila-garcia.jpg"
-                alt="emloyee camila garcia"
-                width="264"
-                height="260"
-                class="employee-photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/employee-camila@2x.webp 2x,
+                    ./images/main/employee-camila@1x.webp 1x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/main/employee-camila@2x.jpeg 2x,
+                    ./images/main/employee-camila@1x.jpg  1x
+                  "
+                />
+                <img
+                  src="./images/main/employee-camila@1x.jpg"
+                  alt="emloyee camila garcia"
+                  width="264"
+                  height="260"
+                  class="employee-photo"
+                />
+              </picture>
               <div class="employee-description">
                 <h3 class="employee">Camila Garcia</h3>
                 <p class="possition">Marketing</p>
@@ -381,13 +531,27 @@
               </div>
             </li>
             <li class="employee-card">
-              <img
-                src="./images/main/employee-daniel-wilson.jpg"
-                alt="employee daniel wilson"
-                width="264"
-                height="260"
-                class="employee-photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/employee-daniel@2x.webp 2x,
+                    ./images/main/employee-daniel@1x.webp 1x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/main/employee-daniel@2x.jpeg 2x,
+                    ./images/main/employee-daniel@1x.jpg  1x
+                  "
+                />
+                <img
+                  src="./images/main/employee-daniel@1x.jpg"
+                  alt="employee daniel wilson"
+                  width="264"
+                  height="260"
+                  class="employee-photo"
+                />
+              </picture>
               <div class="employee-description">
                 <h3 class="employee">Daniel Wilson</h3>
                 <p class="possition">UI Designer</p>
@@ -447,7 +611,7 @@
         </div>
       </section>
 
-      <!-- Customers
+      <!-- Customers -->
 
       <section class="clients">
         <div class="container">
@@ -527,12 +691,12 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <!-- Footer -->
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-container">
         <div class="footer-section-1">
           <a href="./index.html" class="link logo"
@@ -616,11 +780,11 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Modal -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-modal-button" data-modal-close>
           <svg class="close-modal-icon" width="8" height="8">
@@ -638,7 +802,6 @@
                 type="text"
                 id="user-name"
                 name="user-name"
-                required
               />
               <svg class="input-icon" width="18" height="24">
                 <use href="./images/icons.svg#name"></use>
@@ -651,10 +814,9 @@
             <div class="input-wrap">
               <input
                 class="input-field"
-                type="tel"
+                type="text"
                 id="user-phone"
                 name="user-phone"
-                required
               />
               <svg class="input-icon" width="18" height="24">
                 <use href="./images/icons.svg#phone"></use>
@@ -667,7 +829,7 @@
             <div class="input-wrap">
               <input
                 class="input-field"
-                type="email"
+                type="text"
                 id="user-email"
                 name="user-email"
               />
@@ -711,96 +873,9 @@
           <button class="submit-modal-button" type="submit">Send</button>
         </form>
       </div>
-    </div> -->
+    </div> 
 
-    <!-- Mobile menu -->
-    <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
-        <svg
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </button>
-
-      <ul class="mobile-menu list">
-        <li><a href="" class="link">About</a></li>
-        <li><a href="" class="link">Products</a></li>
-        <li><a href="" class="link">Contacts</a></li>
-      </ul>
-
-      <ul class="mobile-contacts list">
-        <li><a class="mobile-tel  link" href="tel:">+11 (000) 111-11-11</a></li>
-        <li><a class="mobile-mail link" href="mailto:">info@devstudio.com</a></li>
-      </ul>
-
-      <ul class="list mobile-social-links">
-        <li class="social-links-item">
-          <a
-            class="link social-link"
-            href=""
-            target="_blank"
-            rel="noopener no-referrer"
-          >
-            <svg class="social-link-icon" width="16" height="16">
-              <use href="./images/icons.svg#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-links-item">
-          <a
-            class="link social-link"
-            href=""
-            target="_blank"
-            rel="noopener no-referrer"
-          >
-            <svg class="social-link-icon" width="16" height="16">
-              <use href="./images/icons.svg#twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-links-item">
-          <a
-            class="link social-link"
-            href=""
-            target="_blank"
-            rel="noopener no-referrer"
-          >
-            <svg class="social-link-icon" width="16" height="16">
-              <use href="./images/icons.svg#facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-links-item">
-          <a
-            class="link social-link"
-            href=""
-            target="_blank"
-            rel="noopener no-referrer"
-          >
-            <svg class="social-link-icon" width="16" height="16">
-              <use href="./images/icons.svg#linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-
- <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

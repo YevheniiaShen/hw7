@@ -26,3 +26,19 @@
       bodyScrollLock.enableBodyScroll(document.body);
     });
   })();
+
+// (() => {
+//     const refs = {
+//       openModalBtn: document.querySelector("[data-menumodal-open]"),
+//       closeModalBtn: document.querySelector("[data-menumodal-close]"),
+//       modal: document.querySelector("[data-menumodal]"),
+//     };
+  
+//     refs.openModalBtn.addEventListener("click", toggleModal);
+//     refs.closeModalBtn.addEventListener("click", toggleModal);
+  
+//     function toggleModal() {
+//       refs.modal.classList.toggle("is-hidden");
+//     }
+//   })();
+  
